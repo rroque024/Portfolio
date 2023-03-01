@@ -60,6 +60,11 @@ header {
     padding: 0.5rem;
     transition: all .25s ease-in-out;
 }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
 .li{
     
     list-style: none;
