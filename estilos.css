@@ -42,30 +42,77 @@ header {
     background-color: #555;
 }
 
-.dark-mode-btn i {
-    font-size: 1.5rem;
-}
+
 .nav{
     display: flex;
     flex-direction: row;
     background-color: #333;
-    
+    width:auto ;
     position: fixed;
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
     border: none;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 0.5rem;
     transition: all .25s ease-in-out;
 }
 nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
-}
-.li{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 5px;
+    gap: 5px;
     
-    list-style: none;
+}
+ul{
+    margin-bottom: 0;
+}   
+/* Estilos para el enlace cuando el cuerpo está en modo claro */
+a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    position: relative;
+  }
+
+
+  /* Estilos para el enlace cuando el cuerpo está en modo oscuro */
+body.dark-mode a:hover {
+    background-color: black;
+    color: white;
+   
+  }
+
+nav a:hover::before,
+nav a:hover::after {
+  content: "[ ";
+  color: black;
+}
+
+nav a:hover::after {
+  content: " ]";
+}
+
+#my-body.dark-mode nav {
+    background-color: #fff;
+  }
+  
+  #my-body.dark-mode nav a {
+    color: #111;
+  }
+  #my-body.dark-mode nav a:hover {
+    background-color: #111;
+    color: #fff;
+  }
+
+  #my-body.dark-mode nav a:hover::before,
+#my-body.dark-mode nav a:hover::after {
+  content: "[ ";
+  color: white;
+}
+
+#my-body.dark-mode nav a:hover::after {
+  content: " ]";
 }
